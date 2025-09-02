@@ -1,0 +1,23 @@
+.rodape-container,
+.rodape {
+    background-color: #d2d2d2;
+    color: #2A5E9E;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 55px;
+    width: 100vw;
+}
+
+.rodape-container {
+    max-width: 1240px;
+}
+
+.rodape-linha {
+    width: 100%;
+    border-bottom: 1px dashed #FFFFFF;
+    margin: 25px auto;
+}

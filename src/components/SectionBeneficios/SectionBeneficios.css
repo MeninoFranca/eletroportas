@@ -1,0 +1,85 @@
+.section-beneficios-section {
+    position: relative;
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-beneficios-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.section-beneficios-bg::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(45deg, #2A5E9E 30%, #EC7F12);
+    opacity: 0.8;
+    border-radius: 0 0 120px 0;
+}
+
+.section-beneficios-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 120px 0;
+}
+
+.section-beneficios-container {
+    position: relative;
+    z-index: 2;
+    padding: 50px 20px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1240px;
+}
+
+.section-beneficios-container h2 {
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.section-beneficios-container h2::first-letter {
+    text-transform: uppercase;
+}
+
+.section-beneficios-container div ul {
+    list-style: none;
+}
+
+.section-beneficios-container div ul li {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.section-beneficios-container div ul li p {
+    text-align: justify;
+}
+
+.section-beneficios-container div ul li img {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1025px) {
+    .container-listas {
+        display: flex;
+        align-items: start;
+        gap: 25px;
+    }
+}

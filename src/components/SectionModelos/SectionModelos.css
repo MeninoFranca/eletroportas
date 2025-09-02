@@ -1,0 +1,74 @@
+.section-modelos-section {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.section-modelos-container {
+    padding: 40px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1240px;
+}
+
+.section-modelos-container h3 {
+    color: #EC7F12;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.section-modelos-container h2 {
+    color: #2A5E9E;
+    font-size: 34px;
+    margin: 10px 0;
+}
+
+.section-modelos-modelos div {
+    width: 100%;
+}
+
+.section-modelos-modelos div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0px 0 40px;
+    max-width: 460px;
+}   
+
+.section-modelos-modelos div h4 {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0 20px 0;
+}
+
+.section-modelos-modelos div p {
+    margin: 15px 0;
+}
+
+
+@media screen and (min-width: 1025px) {
+    .section-modelos-modelos {
+        display: flex;
+        gap: 25px;
+    }
+
+    .section-modelos-container h3 {
+        font-size: 25px;
+    }
+
+    .section-modelos-container h2 {
+        font-size: 52px;
+    }
+
+    .section-modelos-modelos div {
+        width: calc(100% / 3);
+    }
+
+    .section-modelos-modelos div img {
+        max-height: 251px;
+    }
+}

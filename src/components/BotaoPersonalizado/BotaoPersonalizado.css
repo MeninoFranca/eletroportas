@@ -1,0 +1,40 @@
+.botao-personalizado {
+    display: block;
+    background-color: #2a5e9ead;
+    border: 1px solid #2A5E9E;
+    color: #FFFFFF;
+    width: 70%;
+    height: 60px;
+    text-align: start;
+    padding-left: 15px;
+}
+
+.botao-personalizado a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.botao-personalizado span {
+    font-size: 23px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.botao-personalizado p {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1025px) {
+    .botao-personalizado {
+        text-align: center;
+        padding-left: 0;
+    }
+}

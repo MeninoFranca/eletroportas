@@ -1,0 +1,133 @@
+.modal {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 100;
+}
+
+.container-orcamento {
+    display: flex;
+    background-color: #ec7f12;
+    box-shadow: 2px 2px 5px#65656557;
+    z-index: 100;
+    border-radius: 5px;
+}
+
+.button-close,
+button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 300;
+    height: 10px;
+}
+
+.titulo {
+    color: #ffff;
+    padding: 20px;
+
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.conteudo {
+    background-color: #ffff;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 0px 0px 5px 5px
+}
+
+label {
+    color: #235391;
+    margin-bottom: 10px;
+}
+
+.required {
+    color: #cb152e;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 120px;
+}
+
+.select {
+    padding: 10px;
+    border-radius: 0;
+    border-color: #cfdae7;
+    background-color: #fff;
+    color: #235391;
+    outline: none;
+}
+.altura-texto {
+    outline: none;
+    padding: 10px;
+    border-radius: 0;
+    color: #235391;
+    border: 2px solid;
+    border-color: #cfdae7;
+}
+
+.container-botoes {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+.container-botoes-avante {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top:10px
+}
+
+.botao-proximo {
+    display: flex;
+    justify-content: center;
+    background-color: #ec7f12;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 40%;
+    height: 50px;
+    border-radius: 2px;
+}
+.botao-voltar {
+    display: flex;
+    justify-content: center;
+    background-color: #ec7f12;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 40%;
+    height: 50px;
+    border-radius: 2px;
+}
+
+.proximo {
+    font-weight: 600;
+    font-size: 16px;
+}
+.proximo {
+    font-weight: 600;
+    font-size: 16px;
+}
+.voltar {
+    font-weight: 600;
+    font-size: 16px;
+}

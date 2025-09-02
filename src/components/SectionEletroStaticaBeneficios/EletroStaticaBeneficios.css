@@ -1,0 +1,74 @@
+.container-beneficios {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 570px;
+    background-image: url('../../assets/section_especialistas.jpg');
+    background-size: cover;
+    position: relative;
+    margin-top: 0;
+    align-items: center;
+}
+
+.container-beneficios::before {
+    content: '';
+    background: linear-gradient(45deg, #2A5E9E, #EC7F12);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.8;
+}
+.content-beneficios {
+    position: relative;
+    z-index: 1;
+    max-width: 1240px;
+}
+.content-texto > h3 {
+    font-size: 39px;
+    color: #ffff;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    max-width: 700px;
+}
+.content-texto > p {
+    color: #ffff;
+    margin-bottom: 10px;
+    max-width: 700px;
+    text-align: start;
+}
+.content-select > ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: start;
+    margin-bottom: 20px;
+}
+.content-select > ul  li {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #ffff;
+}
+
+.eletrostatica-modal {
+    margin: 80px 0;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1025px) {
+    .content-select ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 800px;
+    }
+
+    .content-select {
+        display: flex;
+    }
+}

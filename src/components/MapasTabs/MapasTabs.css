@@ -1,0 +1,26 @@
+.mapas-tabs {
+    display: flex;
+    width: fit-content;
+    margin: 30px auto 0;
+    cursor: pointer;
+}
+
+.mapas-tabs h3 {
+    border-top: 1px solid #2a5e9e6a;
+    border-left: 1px solid #2a5e9e6a;
+    border-right: 1px solid #2a5e9e6a;
+    padding: 5px;
+    border-radius: 15px 15px 0 0;
+    color: #2A5E9E;
+}
+
+.tab-clicada,
+.mapas-tabs h3:hover {
+    background-color: #ec7f1285;
+}
+
+.iframe {
+    width: 100%;
+    height: 300px;
+    border: 1px solid rgba(128, 128, 128, 0.253);
+}

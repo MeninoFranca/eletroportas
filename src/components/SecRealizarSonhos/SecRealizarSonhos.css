@@ -1,0 +1,119 @@
+.main-sec-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.sec-container {
+    padding: 25px 9px;
+    max-width: 1240px;
+}
+
+.sub-container1_frases {
+    max-width: 664px;
+    text-align: center;
+}
+
+.sub-container1_frases h3:first-of-type {
+    color: #2A5E9E;
+    font-size: 34px;
+}
+
+.sub-container1_frases h3 span {
+    font-size: 34px;
+    color: #EC7F12;
+}
+
+.sub-container1 {
+    animation: swipeLeft 2s forwards;
+}
+
+.sub-container1_frases p {
+    margin: 15px 8px;
+}
+
+/* .sub-container1_frases p:first-of-type {
+    font-weight: 700;
+} */
+
+.sub-container2 {
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+    animation: slideRight 2s forwards;
+}
+
+.sub-container2 img {
+    max-width: 325px;
+    max-height: 430px;
+}
+
+.sub-container2 div {
+    background-color: #2A5E9E;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.365);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 10px;
+    border-radius: 0 30px 30px 40px;
+    color: #FFFFFF;
+    width: 375px;
+    position: absolute;
+    bottom: -70px
+}
+
+.sub-container2 div img {
+    width: 60px;
+}
+
+@keyframes swipeLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .sub-container1 {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .sec-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .sub-container2 div {
+        width: 247px;
+    }
+
+    .sub-container2 > img {
+        width: 380px;
+    }
+}

@@ -1,0 +1,142 @@
+.orange-container-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+.orange-container-container {
+    max-width: 1240px;
+    min-height: 80px;
+    background-color: #EC7F12;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.orange-container-container > div {
+    background-color: #FFFFFF;
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.orange-container-container > ul {
+    list-style: none;
+    width: 96%;
+    background-color: #FFFFFF;
+    margin-top: 5px;
+    padding: 0;
+}
+
+.orange-container-container > ul li {
+    padding: 10px;
+    position: relative;
+}
+
+.orange-container-container > ul li:hover {
+    background-color: #DCE5F9;
+    color: #2A5E9E;
+}
+
+.link-navbar {
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+}
+
+.sub-lista {
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 10px;
+}
+
+.sub-lista.open {
+    max-height: 200px; /* Ajuste conforme necessário */
+    padding: 10px;
+}
+
+.link2 {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    padding: 5px 0;
+}
+.sublista-item:hover {
+    text-decoration: underline;
+    
+}
+
+
+
+@media screen and (min-width: 1032px) {
+    .orange-container2 {
+        background-color: #EC7F12;
+        width: 100%;
+        max-width: 1240px;
+        position: absolute;
+        top: -30px;
+    }
+
+    .orange-container2 > ul {
+        list-style: none;
+        display: flex;
+        height: 80px;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .link-navbar2 {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #FFFFFF;
+    }
+
+    .sub-lista2,
+    .sub-lista22 {
+        background-color: #FFFFFF;
+        list-style: none;
+    }
+
+    .sub-lista2 {
+        position: absolute;
+        bottom: -80px;
+        right: 32%;
+    }
+
+    .sub-lista2 li,
+    .sub-lista22 li {
+        padding: 13px 20px;
+    }
+
+    .sub-lista22 {
+        position: absolute;
+        bottom: -80px;
+        right: 12%;
+    }
+
+    .sublista-item {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .link-navbar2:focus {
+        border-bottom: 3px solid #2A5E9E;
+        color: #2A5E9E;
+    }
+
+    .sublista-item:focus {
+        text-decoration: underline;
+        
+    }
+}

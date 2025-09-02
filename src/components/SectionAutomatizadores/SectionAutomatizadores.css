@@ -1,0 +1,78 @@
+.section-automatizadores-section {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-automatizadores-container {
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-automatizadores-imagem img {
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-automatizadores-info {
+    margin: 20px 10px;
+    text-align: center;
+}
+
+.section-automatizadores-info h3 {
+    color: #EC7F12;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.section-automatizadores-info h2 {
+    color: #2A5E9E;
+    font-size: 34px;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .section-automatizadores-info {
+        margin: 20px 5px;
+    }
+
+    .section-automatizadores-info > h3 {
+        font-size: 22px;
+    }
+
+    .section-automatizadores-info > h2 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .section-automatizadores-container {
+        flex-direction: row;
+        gap: 20px
+    }
+
+    .section-automatizadores-info > h2 {
+        font-size: 50px;
+        margin: 5px 0 20px;
+    }
+
+    .section-automatizadores-info > h3 {
+        font-size: 25px;
+    }
+
+    .section-automatizadores-info {
+        text-align: start;
+    }
+}

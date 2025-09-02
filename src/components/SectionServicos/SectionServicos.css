@@ -1,0 +1,33 @@
+.sec-servicos-section {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.sec-servicos-container {
+    /* display: grid;
+    grid-template-columns: calc((100vw - 30px) / 2) calc((100vw - 30px) / 2);
+    grid-template-rows: minmax(179px, 237px) minmax(179px, 237px);
+    row-gap: 10px;
+    column-gap: 20px; */
+    display: flex;
+    gap: 15px;
+    margin: 40px 15px;
+    position: relative;
+    top: -80px;
+    z-index: 4;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .sec-servicos-container {
+        display: flex;
+    }
+}

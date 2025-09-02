@@ -1,0 +1,32 @@
+import './HeaderPt1.css'
+import logo from '../../assets/logo.png'
+import telefone from '../../assets/icon-telefone.png'
+import email from '../../assets/icon-email.png'
+
+export const HeaderPt1 = () => {
+    return (
+        <section className='headerPt1-section'>
+            <div className='headerPt1-container'>
+                <div className='headerPt1-logo'>
+                    <img src={logo} />
+                </div>
+                <div className='headerPt1-faleconosco'>
+                    <img src={telefone} />
+                    <div>
+                        <h3>Fale conosco</h3>
+                        <p>(71) 99610-2055 Salvador</p>
+                        <p>(75) 99710-1150 Feira de Santana</p>
+                        <p>(77) 99862-2777 Barreiras</p>
+                    </div>
+                </div>
+                <div className='headerPt1-faleconosco'>
+                    <img src={email} />
+                    <div>
+                        <h3>Mande um e-mail</h3>
+                        <p>contato@eletroportas.com.br</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}

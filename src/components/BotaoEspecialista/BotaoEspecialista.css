@@ -1,0 +1,27 @@
+.btn-especialista {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 19px 35px;
+}
+
+.btn-especialista img {
+    width: 25px;
+    height: 25px;
+}
+
+.btn-especialista p {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.btn-especialista:hover {
+    cursor: pointer;
+}

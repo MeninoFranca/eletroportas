@@ -1,0 +1,12 @@
+.check-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px 5px;
+}
+
+.check-container h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2A5E9E;
+}

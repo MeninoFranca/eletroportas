@@ -1,0 +1,96 @@
+.dados-sec,
+.dados-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dados-sec {
+    width: 100%;
+}
+
+.dados-container {
+    margin: 50px 0;
+    background-image: url('../../assets/industria.jpg');
+    width: 100%;
+    height: 560px;
+    justify-content: space-evenly;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 25px;
+    animation: slideUp 2s forwards;
+}
+
+.dados-container::before {
+    content: '';
+    width: 100%;
+    height: 560px;
+    background: linear-gradient(45deg, #ec7f12c9, #2a5e9ec7 80%);
+    position: absolute;
+    border-radius: 25px;
+}
+
+.dados-container div {
+    position: relative;
+    z-index: 2;
+}
+
+.dados-container div p:first-of-type {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.dados-container div p:last-of-type {
+    font-size: 20px;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .dados-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 160px;
+        height: 320px;
+    }
+
+    .dados-container::before {
+        height: 320px;
+    }
+
+    .dados-container div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .dados-container {
+        display: flex;
+        flex-direction: row;
+        height: 200px;
+        max-width: 1240px;
+    }
+
+    .dados-container::before {
+        height: 200px;
+        max-width: 1240px;
+    }
+}

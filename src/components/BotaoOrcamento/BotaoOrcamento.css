@@ -1,0 +1,22 @@
+.btn-orcamento {
+    display: flex;
+    border: none;
+    background-color: #EC7F12;
+    width: 202.4px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 27px;
+    border-radius: 4px;
+}
+
+.btn-orcamento img {
+    width: 35px;
+    height: 35px;
+}
+
+.btn-orcamento h3 {
+    color: #FFFFFF;
+    margin-left: 10px;
+    text-transform: uppercase;
+}

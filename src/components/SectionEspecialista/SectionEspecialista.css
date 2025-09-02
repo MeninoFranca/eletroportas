@@ -1,0 +1,87 @@
+section {
+    background-color: #FFFFFF;
+}
+
+.container {
+    width: 100vw;
+    height: 411.6px;
+    background-image: url(../../assets/section_especialistas.jpg);
+    background-size: cover;
+    border-radius: 0 0 100px 0;
+    position: relative;
+    z-index: 0;
+    animation: showUp 3s forwards;
+}
+
+.container::before {
+    content: '';
+    width: 100%;
+    height: 411.6PX;
+    background-color: rgba(0, 0, 0, 0.89);
+    position: absolute;
+    z-index: 1;
+    border-radius: 0 0 100px 0;
+}
+
+.sub-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 411.6px;
+    gap: 70px;
+}
+
+.sub-container img {
+    width: 75px;
+    height: 75px;
+}
+
+@keyframes showUp {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.salvando {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    gap: 30px;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width:768px) {
+    .salvando {
+        flex-direction: row;
+        text-align: start;
+    }    
+}
+
+@media screen and (min-width: 1025px) {
+    .container {
+        height: 150px;
+    }
+
+    .container::before {
+        height: 150px;
+    }
+
+    .sub-container {
+        flex-direction: row;
+        height: 150px;
+        justify-content: space-around;
+    }
+}

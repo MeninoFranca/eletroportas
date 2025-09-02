@@ -1,0 +1,124 @@
+.container-carrossel-principal {
+    margin: 0px 0;
+    padding: 20px 0;
+    text-align: center;
+    color: #ffff;
+    background-color: #1d1741; 
+    position: relative;
+    background-image: url('../../assets/porta-carrossel.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container-carrossel-principal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #2A5A9E, #EC7F12); 
+    opacity: 0.85;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.container-carrossel-principal > * {
+    position: relative;
+    z-index: 2; 
+}
+.container-carrossel-principal > h5 {
+   color: #b01c3d;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.container-carrossel-principal > h2 {
+   color: #ffff;
+   font-size: 34px;
+   line-height: 1.3em;
+}
+
+.setas {
+    background: #ffff;
+    margin: 0 10px;
+    width: 30px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.container-carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transicao-carrossel > img{
+    height: 265px;
+    width: 240px;
+    padding: 10px 0 0;
+    object-fit: cover;
+} 
+
+.imagens {
+    transition: transform 1s;
+}
+
+.deslizar-esquerda {
+    transform: translateX(-5px);
+}
+
+.deslizar-direita {
+    transform: translateX(5px);
+}
+
+.container-pagination {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pagination {
+    color: #52488867;
+}
+
+
+.imagem-container {
+    display: flex;
+    gap: 10px;
+}
+
+.container-principal,  h5{
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #2a5e9e;
+    text-shadow: 4px 4px 8px #01265a6c
+}
+.container-principal,  h2{
+    font-size: 52px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: -.5px;
+    color: #ffff;
+}
+.container-principal{
+    display: flex;
+}
+
+.titulo{
+    display: flex;
+    justify-items:start;
+    flex-direction: column;
+   
+}
+
+.titulo-h5 {
+    color: #ffffff;
+}

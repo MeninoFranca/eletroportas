@@ -1,0 +1,96 @@
+/* FooterPt2.css */
+
+.rodape-parte2 {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape-sobre-eletroportas {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.rodape-sobre-eletroportas h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.rodape-sobre-eletroportas p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.rodape-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.rodape-sobre-eletroportas > p {
+    text-align: justify;
+    margin-right: 25px;
+}
+
+.rodape-links > div {
+    margin: 30px 0;
+    width: 100%;
+}
+
+.rodape-links > div > h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.rodape-links > div > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px 0;
+    padding: 0;
+}
+
+.rodape-links > div > ul > li {
+    display: flex;
+    gap: 20px;
+    align-items: start;
+}
+
+.rodape-links > div > ul > li > img {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .rodape-links {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .rodape-links > div {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .rodape-parte2 {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .rodape-parte2 > div {
+        width: calc(100% / 2 - 20px);
+    }
+
+    .rodape-sobre-eletroportas {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
