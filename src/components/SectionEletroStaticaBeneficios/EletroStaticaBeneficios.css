@@ -54,12 +54,6 @@
     margin: 80px 0;
 }
 
-
-
-
-
-
-
 @media screen and (min-width: 1025px) {
     .content-select ul {
         flex-direction: row;
@@ -72,3 +66,42 @@
         display: flex;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .container-beneficios {
+      flex-direction: column;
+      height: auto;
+      padding: 40px 15px;
+      text-align: center;
+    }
+  
+    .content-beneficios {
+      padding: 0 10px;
+      max-width: 100%;
+    }
+  
+    .content-texto > h3 {
+      font-size: 22px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  
+    .content-texto > p {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  
+    .content-select > ul {
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .content-select > ul li {
+      font-size: 13px;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  

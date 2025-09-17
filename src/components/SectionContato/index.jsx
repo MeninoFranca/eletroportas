@@ -13,7 +13,6 @@ export const SectionContato = () => {
                             <img src={placeholder} />
                             <h3>Confira nossos Endereços</h3>
                             <p>Rua: Tancredo Neves da Ceasa, 100, Jardim das Margaridas - Salvador/BA</p>
-                            <p>Av. Presidente Dutra, 2457, Centro - Feira de Santana/BA</p>
                             <p>Av. Antônio Carlos Magalhães, 2524, Serra do Mimo - Barreiras/BA</p>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 .inicio-section {
     max-height: fit-content;
-    width: fit-content;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -8,4 +8,15 @@
     width: 100%;
     height: 50px;
     background-color: #FFFFFF;
+}
+
+@media screen and (max-width: 480px) {
+  .inicio-section {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 2px;
+  }
+  .sep {
+    height: 30px;
+  }
 }

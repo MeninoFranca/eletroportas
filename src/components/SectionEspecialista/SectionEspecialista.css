@@ -67,7 +67,7 @@ section {
     .salvando {
         flex-direction: row;
         text-align: start;
-    }    
+    }
 }
 
 @media screen and (min-width: 1025px) {

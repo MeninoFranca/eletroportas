@@ -31,7 +31,6 @@ export const Acessorios = () => {
             <SectionPers />
             <SectionIcons2 />
             <div className='sec-personalizavel-divisoria'></div>
-            <ModalVideo videoId={video} texto='Assistir vídeo' imagem={eletroportas} tipo='video/mp4'/>
             <h2 className='acessorios-titulo'>Confira os acessórios que podem fazer a diferença nas portas de enrolar automáticas</h2>
             <p className='acessorios-texto'>Confira nossos acessórios únicos, projetados para enriquecer e aprimorar sua porta de enrolar</p>
             <div className='acessorios-container'>

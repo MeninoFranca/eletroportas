@@ -3,34 +3,70 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin: 40px 0;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .section-kit-container {
     position: relative;
     max-width: 1240px;
+    width: 100%;
 }
 
 .section-kit-container h2 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     text-align: center;
     color: #2A5E9E;
     margin-bottom: 25px;
+    padding: 0 10px;
 }
+
+.dual-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
 .img-kit {
-    margin: 0 calc((100vw - 240px) / 2);
-    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
+
+.img-kit img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.img-kit .botao-kit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-kit .botao-kit button {
+    width: 90%;
+    max-width: 300px;
+}
+
 .item1 {
     display: flex;
     align-items: center;
     font-weight: 700;
     gap: 10px;
+    padding: 15px;
     border: 1px solid rgba(128, 128, 128, 0.379);
     cursor: pointer;
     transition: background-color 1s;
+    background-color: #fff;
+    border-radius: 6px 6px 0 0;
 }
 
 .item1 img {
@@ -44,39 +80,57 @@
     transition: max-height 0.5s ease-out, padding 0.5s ease-out;
     border-left: 1px solid rgba(128, 128, 128, 0.379);
     border-right: 1px solid rgba(128, 128, 128, 0.379);
+    background-color: #f9f9f9;
 }
 
 .item2.open {
     max-height: 500px;
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .item2 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .item2:last-of-type {
     border-bottom: 1px solid rgba(128, 128, 128, 0.379);
+    border-radius: 0 0 6px 6px;
 }
 
-
+/* Tablet */
 @media screen and (min-width: 768px) {
     .section-kit-container h2 {
-        font-size: 25px;
+        font-size: 24px;
     }
 
+    .item2 ul {
+        font-size: 15px;
+    }
 }
 
+/* Desktop */
 @media screen and (min-width: 1024px) {
+    .dual-section {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+    .img-kit {
+        width: 50%;
+        align-items: flex-start;
+    }
+
+    .img-kit .botao-kit {
+        justify-content: flex-start;
+    }
+
     .section-kit-container h2 {
         font-size: 32px;
     }
-    .dual-section {
-        display: flex;
-        align-items: center;
-        gap:100px;
-    }
-    .img-kit {
-        margin: 0;
-    } 
 }

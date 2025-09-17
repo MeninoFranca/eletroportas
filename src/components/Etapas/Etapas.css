@@ -34,3 +34,26 @@
     margin-top: 25px;
 }
 
+@media (max-width: 600px) {
+    .etapas-container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .etapas-container h4 {
+        font-size: 36px;
+        top: -30px;
+        right: 10px;
+    }
+
+    .etapas-container div {
+        max-width: 100%;
+        max-height: auto;
+    }
+
+    .etapas-container h3 {
+        font-size: 16px;
+        margin-top: 15px;
+        text-align: center;
+    }
+}

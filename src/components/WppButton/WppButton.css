@@ -3,6 +3,7 @@
 }
 
 .wpp-button {
+    all: unset; /* zera os estilos padrões do botão (borda, fundo, padding) */
     width: fit-content;
     background-color: #25D366;
     padding: 15px;
@@ -12,12 +13,21 @@
     right: 50px;
     display: flex;
     align-items: center;
+    justify-content: center; /* centraliza o conteúdo */
     cursor: pointer;
     z-index: 500;
+    box-sizing: border-box; /* para o padding contar dentro da largura */
+    transition: background 0.3s ease;
 }
 
 .wpp-button:hover {
     background: linear-gradient(to bottom, #25D366, #44f786);
+}
+
+.wpp-button img {
+    display: block;
+    width: 24px; /* ajuste o tamanho que preferir */
+    height: 24px;
 }
 
 .full-modal {
@@ -160,3 +170,49 @@
 .button-barreiras-wpp:hover {
     background-color: #065249;
 }
+
+@media (max-width: 600px) {
+    .wpp-button {
+      bottom: 15px;
+      right: 15px;
+      padding: 12px;
+    }
+  
+    .modal-content {
+      max-width: 90%;
+      margin: 0 10px;
+    }
+  
+    .header-content-wpp {
+      font-size: 16px;
+      padding: 8px;
+      max-width: 90%;
+    }
+  
+    .titulo-sessao-wpp {
+      padding: 10px;
+    }
+  
+    .titulo-sessao-wpp > img {
+      width: 30px;
+    }
+  
+    .section-content-wpp {
+      padding: 15px;
+    }
+  
+    .button-salvador-wpp,
+    .button-feiradesantana-wpp,
+    .button-barreiras-wpp {
+      font-size: 16px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+  
+    .modal-close {
+      top: 10px;
+      right: 10px;
+      font-size: 1.2rem;
+    }
+  }
+  

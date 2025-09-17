@@ -9,7 +9,7 @@ export const SectionEspecialista = () => {
             <div className='container'>
                 <div className='sub-container'>
                     <div className='salvando'>
-                        <img src={grinder} />
+                        <img src={grinder} alt="grinder"/>
                         <div>
                             <h3>Para Serralheiros de Excelência</h3>
                             <p>Assegure a Parceria que Vai Impulsionar o Seu Negócio</p>
@@ -21,3 +21,4 @@ export const SectionEspecialista = () => {
         </section>
     )
 }
+

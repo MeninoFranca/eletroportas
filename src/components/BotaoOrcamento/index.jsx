@@ -12,7 +12,7 @@ export const BotaoOrcamento = ({label}) => {
     return (
         <>
             <button className='btn-orcamento' onClick={handleGetOpen}>
-                <img src={grafico}  loading="lazy" />
+                <img src={grafico}  loading="lazy" alt="grafico"/>
                 <h3>{label}</h3>
             </button>
             {isOpen && <Orcamento setOpen={setIsOpen} />}

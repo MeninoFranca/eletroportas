@@ -41,41 +41,30 @@ export const SectionKit = () => {
     return (
         <>
             <section className='section-kit-section'>
-                <div className='section-kit-container'>
-                    <h2>Foque nas vendas, a Eletroportas fabrica para você!</h2>
-                    <div className='dual-section'>
-                 
-                            <div className='img-kit'>
-                                <img src={kit} alt="kit portas" />
-                                <BotaoOrcamento label="Orçamento"  />
-                            </div>
-                        
-                  
-                        <div>
-                            {
-                                listaKit.map((item, indice) => {
-                                    return (
-                                        <>
-                                            <div className='item1' key={indice} onClick={() => setClicadoKit(indice)} >
-                                                <img src={indice === clicadoKit ? interrogacao : interrogacaoLaranja} />
-                                                <p>{item.titulo}</p>
-                                            </div>
-                                            {
-                                                <div className={`item2 ${indice === clicadoKit ? 'open' : ''}`}>
-                                                    <ul>
-                                                        {
-                                                            item.itens.map((item, i) => {
-                                                                return (<li key={i}>{item}</li>)
-                                                            })
-                                                        }
-                                                    </ul>
-                                                </div>
-                                            }
-                                        </>
-                                    )
-                                })
-                            }
+                <div className='dual-section'>
+                    <div className='img-kit'>
+                        <img src={kit} alt="kit portas" />
+                        <div className='botao-kit'>
+                            <BotaoOrcamento label="Orçamento" />
                         </div>
+                    </div>
+
+                    <div>
+                        {listaKit.map((item, indice) => (
+                            <div key={indice}>
+                                <div className='item1' onClick={() => setClicadoKit(indice)}>
+                                    <img src={indice === clicadoKit ? interrogacao : interrogacaoLaranja} />
+                                    <p>{item.titulo}</p>
+                                </div>
+                                <div className={`item2 ${indice === clicadoKit ? 'open' : ''}`}>
+                                    <ul>
+                                        {item.itens.map((item, i) => (
+                                            <li key={i}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

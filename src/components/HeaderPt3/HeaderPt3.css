@@ -6,13 +6,24 @@
     cursor: pointer;
 }
 
+/* Imagens responsivas em geral */
+.headerPt3-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
+/* Classes específicas para controlar tamanhos */
+.icon-medalha {
+    max-width: 40px;
+}
 
+.social-icon {
+    max-width: 25px;
+    margin-left: 10px;
+}
 
-
-
-
-
+/* Estilos para desktop a partir de 768px */
 @media screen and (min-width: 768px) {
     .headerPt3-section {
         background-color: #2A5E9E;
@@ -35,6 +46,7 @@
     .headerPt3-container > div {
         display: flex;
         gap: 10px;
+        align-items: center;
     }
     
     .headerPt3-container > div > p {
@@ -42,7 +54,25 @@
         color: #FFFFFF;
     }
     
-    .headerPt3-container img {
-        width: 25px;
+    /* Ajuste dos tamanhos das imagens no desktop */
+    .icon-medalha {
+        max-width: 50px;
+    }
+    
+    .social-icon {
+        max-width: 30px;
+        margin-left: 10px;
+    }
+}
+
+/* Ajustes para telas menores que 768px */
+@media screen and (max-width: 767px) {
+    .icon-medalha {
+        max-width: 30px;
+    }
+    
+    .social-icon {
+        max-width: 20px;
+        margin-left: 8px;
     }
 }

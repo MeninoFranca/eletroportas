@@ -8,15 +8,6 @@ const EletroStaticaBeneficios = () => {
 
     return (
         <>
-            <div className='eletrostatica-modal'>
-                <ModalVideo
-                    videoId={portaRosa}
-                    imagem={porta}
-                    tipo={'video/mp4'}
-                    texto='Assistir video'
-                />
-            </div>
-
             <section className='container-beneficios'>
                 <div className='content-beneficios'>
                     <div className='content-texto'>

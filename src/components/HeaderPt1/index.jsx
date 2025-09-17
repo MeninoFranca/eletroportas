@@ -8,19 +8,18 @@ export const HeaderPt1 = () => {
         <section className='headerPt1-section'>
             <div className='headerPt1-container'>
                 <div className='headerPt1-logo'>
-                    <img src={logo} />
+                    <img style={{width: '210px', height: '200px'}} src={logo} alt="logo da eletroportas" />
                 </div>
                 <div className='headerPt1-faleconosco'>
-                    <img src={telefone} />
+                    <img src={telefone} alt="icon telefone"/>
                     <div>
                         <h3>Fale conosco</h3>
                         <p>(71) 99610-2055 Salvador</p>
-                        <p>(75) 99710-1150 Feira de Santana</p>
                         <p>(77) 99862-2777 Barreiras</p>
                     </div>
                 </div>
                 <div className='headerPt1-faleconosco'>
-                    <img src={email} />
+                    <img src={email} alt="icon email" />
                     <div>
                         <h3>Mande um e-mail</h3>
                         <p>contato@eletroportas.com.br</p>

@@ -127,3 +127,40 @@
         justify-content: flex-end;
     }
 }
+
+@media (max-width: 600px) {
+    .parte-azul {
+        padding: 40px 15px 30px 15px;
+    }
+
+    .parte-azul h2 {
+        font-size: 22px;
+        padding: 15px 0;
+    }
+
+    .parte-azul h3 {
+        font-size: 18px;
+    }
+
+    .parte-azul img {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        margin: 20px;
+    }
+
+    .parte-laranja {
+        padding: 30px 15px;
+        background-position: center;
+    }
+
+    .parte-laranja > p {
+        font-size: 16px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .parte-laranja div {
+        gap: 10px;
+    }
+}

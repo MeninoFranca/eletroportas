@@ -52,3 +52,42 @@
 .parte-azul2 div p {
     margin: 20px 0;
 }
+
+@media (max-width: 600px) {
+    .dual-sec2 {
+      margin-top: 20px;
+    }
+  
+    .dual-container2 {
+      margin: 30px 10px;
+    }
+  
+    .parte-azul2 {
+      padding: 30px 15px 20px 15px;
+      max-width: 100%;
+      max-height: none;
+      border-radius: 20px 20px 0 0;
+    }
+  
+    .parte-azul2 h3 {
+      font-size: 18px;
+    }
+  
+    .parte-azul2 h2 {
+      font-size: 24px;
+      padding: 10px 0;
+    }
+  
+    .parte-azul2 img {
+      width: 60px;
+      height: 60px;
+      padding: 10px;
+      margin: 15px 0;
+    }
+  
+    .parte-azul2 div p {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  }
+  

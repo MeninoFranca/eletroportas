@@ -11,14 +11,29 @@ export const FooterPt3 = () => {
                 <p>Eletroportas © 2024 - Todos os Direitos Resevados</p>
             </div>
             <div className='rodape-redes'>
-                <a href='https://www.facebook.com/eletroportasofc/' target='_blank'>
-                    <img src={facebook} />
+                <a
+                    href='https://www.facebook.com/eletroportasofc/'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label='Página da Eletroportas no Facebook'
+                >
+                    <img src={facebook} alt='' />
                 </a>
-                <a target='_blank' href='https://www.youtube.com/@eletroportas-portasdeenrol7842/featured'>
-                    <img src={youtube} />
+                <a
+                    href='https://www.youtube.com/@eletroportas-portasdeenrol7842/featured'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label='Canal da Eletroportas no YouTube'
+                >
+                    <img src={youtube} alt='' />
                 </a>
-                <a target='_blank' href='https://www.instagram.com/eletroportas?igsh=MTJ4Zjl4cXhpcHQ1cg=='>
-                    <img src={instagram} />
+                <a
+                    href='https://www.instagram.com/eletroportas?igsh=MTJ4Zjl4cXhpcHQ1cg=='
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label='Perfil da Eletroportas no Instagram'
+                >
+                    <img src={instagram} alt='' />
                 </a>
             </div>
         </div>

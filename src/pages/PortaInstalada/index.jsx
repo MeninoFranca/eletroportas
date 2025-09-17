@@ -30,7 +30,7 @@ export const PortaInstalada = () => {
             <SectionBeneficios />
             <SectionModelos />
             <SectionSucesso />
-            <SectionGrid2 texto='Descubra porque somos a escolhida para realizar o sonho de quem deseja ter uma porta de enrolar automática' imagem1={prt1} imagem2={prt2} imagem3={prt3} imagem4={prt4} imagem5={prt5} imagem6={prt6} />
+            <SectionGrid2 texto='Descubra porque somos a escolhida para realizar o sonho de quem deseja ter uma porta de enrolar automática' imagem1={prt1}  imagem2={prt3} imagem3={prt4} imagem4={prt6} />
             <SectionOrcamento />
             <SectionDuvidas />
         </section>

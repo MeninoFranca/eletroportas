@@ -1,11 +1,11 @@
 .footer-parte3 {
-    height: 128px;
+    height: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 5px;
     width: 100%;
 }
 
@@ -16,12 +16,12 @@
 }
 
 .rodape-redes img {
-    width: 25px;
-    height: 25px;
+    width: 18px;
+    height: 18px;
 }
 
 .footer-parte3 > div > p {
-    font-size: 13px;
+    font-size: 11px;
 }
 
 
@@ -45,5 +45,34 @@
 
     .footer-parte3 > div:first-of-type {
         width: 800px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-parte3 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 15px;
+        height: auto;
+    }
+
+    .rodape-redes {
+        margin-right: 0;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .rodape-redes img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .footer-parte3 > div > p {
+        font-size: 10px;
+    }
+
+    .footer-parte3 > div:first-of-type {
+        width: 100%;
     }
 }

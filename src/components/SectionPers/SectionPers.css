@@ -1,74 +1,76 @@
+/* Estilos base (Mobile First) */
 .sec-person2-section {
-    height: 590px;
+    position: relative; /* Necessário para conter o fundo posicionado absolutamente */
     width: 100%;
+    color: #FFFFFF;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.sec-person2-bg {
+    align-items: center;
+    padding: 100px 25px;
+    min-height: 590px;
+    /* A propriedade 'overflow: hidden' foi removida para evitar cortar outros elementos como o menu */
+  }
+  
+  .sec-person2-bg {
     width: 100%;
     height: 100%;
-    position: relative;
-}
-
-.sec-person2-bg > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* MUDANÇA: Usamos um z-index positivo baixo. */
+  }
+  
+  .sec-person2-bg > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 0 0 80px 0;
-}
-
-.sec-person2-bg::before {
+  }
+  
+  .sec-person2-bg::before {
     content: '';
     width: 100%;
-    height: 590px;
+    height: 100%;
     position: absolute;
-    background: linear-gradient(45deg, #2A5E9E, #EC7F12);
     top: 0;
     left: 0;
+    background: linear-gradient(45deg, #2A5E9E, #EC7F12);
     opacity: 0.8;
     border-radius: 0 0 80px 0;
-}
-
-.sec-person2-container {
+  }
+  
+  .sec-person2-container {
+    width: 100%;
     max-width: 1240px;
-    position: absolute;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.sec-person2-conteudo {
+    margin: 0 auto;
+    position: relative; /* MUDANÇA: Adicionado para que o z-index funcione */
+    z-index: 2; /* MUDANÇA: Garante que o conteúdo fique sobre o fundo (z-index: 1) */
+  }
+  
+  .sec-person2-conteudo {
     display: flex;
     flex-direction: column;
     gap: 25px;
     max-width: 500px;
-    margin-top: 25px;
-}
-
-.sec-person2-conteudo > h2 {
+  }
+  
+  .sec-person2-conteudo > h2 {
     text-transform: lowercase;
-}
-
-.sec-person2-conteudo > h2::first-letter {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+  
+  .sec-person2-conteudo > h2::first-letter {
     text-transform: uppercase;
-}
-
-
-
-
-@media screen and (min-width: 1032px) {
+  }
+  
+  /* Media Query para telas maiores (tablets e desktops) */
+  @media screen and (min-width: 768px) {
     .sec-person2-section {
-        height: 620px;
+      padding: 120px 40px;
+      min-height: 620px;
     }
-
-    .sec-person2-bg::before {
-        height: 620px;
+  
+    .sec-person2-conteudo > h2 {
+      font-size: 3.5rem;
     }
-
-    .sec-person2-conteudo {
-        margin: 90px calc((100vw - 1240px) / 2) 0
-    }
-}
+  }

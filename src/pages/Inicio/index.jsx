@@ -12,11 +12,11 @@ export const Inicio = () => {
     return (
         <section className='inicio-section'>
             <VideoSection />
+            <Carrossel />
             <SectionEspecialista /> 
             <SectionProdutos />
             <SecRealizarSonhos />
             <div className='sep'></div>
-            <Carrossel />
             <SectionIcons />
             <DualSection />
             <ClientesFeedback />

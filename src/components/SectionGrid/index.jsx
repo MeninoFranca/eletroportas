@@ -20,12 +20,6 @@ export const SectionGrid = (props) => {
                     <div>
                         <img src={props.imagem4} />
                     </div>
-                    <div>
-                        <img src={props.imagem5} />
-                    </div>
-                    <div>
-                        <img src={props.imagem6} />
-                    </div>
                 </div>
             </div>
         </section>
@@ -37,8 +31,6 @@ SectionGrid.propTypes = {
     imagem2: PropTypes.string,
     imagem3: PropTypes.string,
     imagem4: PropTypes.string,
-    imagem5: PropTypes.string,
-    imagem6: PropTypes.string,
     titulo: PropTypes.string,
     texto: PropTypes.string
 }

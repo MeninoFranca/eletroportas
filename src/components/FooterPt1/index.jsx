@@ -21,8 +21,6 @@ export const FooterPt1 = () => {
                     <h5>Endereços</h5>
                     <p><b>Salvador:</b> Rua Tancredo Neves da Ceasa, 100
                         Jardim das Margaridas</p>
-                    <p><b>Feira de Santana: </b>Av. Presidente Dutra, 2457
-                        Centro</p>
                     <p><b>Barreiras:</b> Av. Antônio Carlos Magalhães, 2524
                         Serra do Mimo</p>
                 </div>

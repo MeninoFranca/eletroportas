@@ -33,7 +33,6 @@ export const DadosSection = () => {
 
     useEffect(() => {
         if (ativado) {
-            //anos marcados
             const INDICADORANOSMARCADOS = 1500
             const INDICADORPORTASFABRICADAS = 2500
             const INDICADORPORTASINSTALADAS = 1900

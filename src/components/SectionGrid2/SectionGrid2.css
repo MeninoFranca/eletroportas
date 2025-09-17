@@ -17,6 +17,9 @@
     color: #2A5E9E;
     max-width: 100%;
     text-transform: lowercase;
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 25px;
 }
 
 .section-experiencia-container h2 span {
@@ -27,19 +30,31 @@
     text-transform: uppercase;
 }
 
-.section-experiencia-container h2,
 .section-experiencia-container p {
     text-align: center;
     padding: 0 15px;
     margin-bottom: 25px;
+    font-weight: bold;
 }
 
+/* --- INÍCIO DAS CORREÇÕES NA GALERIA --- */
+
+/* Estilo base para a galeria (Mobile First) */
 .section-experiencia-fotos {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(50px, 250px) minmax(50px, 250px) minmax(50px, 250px);
-    padding: 10px;
+    grid-template-columns: 1fr 1fr; /* Layout de 2 colunas para celular */
     gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Organiza as imagens em um layout de colagem:
+   - A primeira e a última imagem ocupam a largura total.
+   - A segunda e a terceira ficam lado a lado.
+*/
+.section-experiencia-fotos div:nth-child(1),
+.section-experiencia-fotos div:nth-child(4) {
+    grid-column: 1 / -1; /* Ocupa todas as colunas (de 1 a -1) */
 }
 
 .section-experiencia-fotos div {
@@ -50,29 +65,41 @@
 .section-experiencia-fotos div img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    display: block; /* Remove espaços extras que podem aparecer abaixo da imagem */
+    border-radius: 8px; /* Adiciona um leve arredondamento estético */
+    /* A propriedade 'aspect-ratio: 1 / 1' foi REMOVIDA para permitir
+       que as imagens tenham alturas variadas e criem um layout mais natural. */
 }
 
-
-
-
-
-
-
-
+/* Responsivo: aumenta fonte nos dispositivos maiores */
 @media screen and (min-width: 768px) {
     .section-experiencia-container h2 {
         font-size: 48px;
     }
+
+    /* Altera o layout da galeria para telas maiores para corresponder ao seu design */
+    .section-experiencia-fotos {
+        grid-template-columns: repeat(3, 1fr); /* Layout de 3 colunas */
+        grid-template-rows: auto auto; /* Duas linhas com altura automática */
+    }
+
+    /* Reseta a configuração de 'grid-column' que foi definida para o mobile */
+    .section-experiencia-fotos div:nth-child(1),
+    .section-experiencia-fotos div:nth-child(4) {
+        grid-column: auto;
+    }
+    
+    /* Faz a quarta imagem ocupar toda a linha inferior */
+    .section-experiencia-fotos div:nth-child(4) {
+        grid-column: 1 / -1; /* Ocupa as 3 colunas da linha de baixo */
+    }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
     .section-experiencia-container h2 {
         font-size: 52px;
     }
-
-    .section-experiencia-fotos {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: minmax(50px, 250px) minmax(50px, 250px);
-    }
+    /* O layout da galeria já foi ajustado no breakpoint anterior (768px),
+       então não são necessárias mais alterações aqui. */
 }

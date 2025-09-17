@@ -1,6 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.eletroportas.com.br/</loc>
+  </url>
+  <url>
+    <loc>https://www.eletroportas.com.br/portainstalada</loc>
+  </url>
+  <url>
+    <loc>https://www.eletroportas.com.br/revender</loc>
+  </url>
+  <url>
+    <loc>https://www.eletroportas.com.br/acessorios</loc>
+  </url>
+  <url>
+    <loc>https://www.eletroportas.com.br/automatizadores</loc>
+  </url>
+  <url>
+    <loc>https://www.eletroportas.com.br/sobre</loc>
+  </url>
+  <url>
+    <loc>https://www.eletroportas.com.br/pintura</loc>
+  </url>
+  <url>
+    <loc>https://www.eletroportas.com.br/atendimento</loc>
   </url>
 </urlset>

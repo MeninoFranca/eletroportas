@@ -1,6 +1,6 @@
 .sec-person.section {
     position: relative;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +21,7 @@
 
 .sec-person-bg::before {
     content: '';
-    width: 100vw;
+    width: 100%;
     height: 700px;
     background: linear-gradient(45deg, #EC7F12, #2A5E9E 80%);
     position: absolute;
@@ -103,5 +103,43 @@
 @media screen and (min-width: 1240px) {
     .sec-person-conteudo {
         margin-left: calc((100vw - 1240px) / 2);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sec-person-bg {
+        height: 400px;
+    }
+
+    .sec-person-bg > img {
+        height: 400px;
+        border-radius: 0 0 40px 0;
+    }
+
+    .sec-person-bg::before {
+        height: 400px;
+        border-radius: 0 0 40px 0;
+    }
+
+    .sec-person-container {
+        top: 220px;
+        padding: 0 15px;
+    }
+
+    .sec-person-conteudo {
+        height: auto;
+        padding: 40px 15px;
+    }
+
+    .sec-person-conteudo > h2 {
+        font-size: 36px;
+    }
+
+    .sec-person-conteudo > h3 {
+        font-size: 14px;
+    }
+
+    .sec-person-conteudo > p {
+        font-size: 14px;
     }
 }

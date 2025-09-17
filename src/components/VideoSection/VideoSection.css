@@ -1,7 +1,7 @@
 .sec {
     position: relative;
     max-width: 100vw;
-    max-height: 850px;
+    max-height: 80vh;
     display: flex;
     flex-direction: column;
 }
@@ -49,16 +49,16 @@
 
 .frases {
     position: absolute;
-    top: 30px;
+    top: 5px;
     color: #FFFFFF;
     z-index: 2;
-    padding: 0 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     left: 0;
-    max-width: 1240px;
+    max-width: 1040px;
+    padding: 0 15px; /* espaçamento interno para evitar colar nas bordas */
 }
 
 @keyframes slideLeft {
@@ -87,7 +87,7 @@
 }
 
 .frases h2 {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     animation: slideRight 2s forwards;
     text-transform: lowercase;
 }
@@ -110,8 +110,27 @@
 }
 
 .frases p:last-of-type {
-    margin-bottom: 55px;
+    margin-bottom: 70px; /* aumentei para dar mais espaço para o botão */
     animation: slideUp 2s forwards;
+}
+
+/* Estilo para o botão orçamento */
+.botao-orcamento {
+    width: 200px; /* largura fixa */
+    max-width: 90vw; /* para telas pequenas */
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    margin-bottom: 40px; /* espaço abaixo do botão */
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #F58220;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.botao-orcamento:hover {
+    background-color: #d46e16;
 }
 
 @media screen and (min-width: 768px) {
@@ -163,5 +182,41 @@
 
     .frases {
         margin-left: calc((100vw - 1240px) / 2);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .frases p:first-of-type {
+        font-size: 1rem; /* diminui o tamanho do texto para caber melhor */
+        margin-bottom: 15px;
+        padding: 0 10px; /* pequeno espaçamento lateral */
+    }
+
+    .video-container{
+        height: 75vh;
+    }
+
+    .frases h2 {
+        font-size: 1.8rem; /* tamanho menor para título */
+        padding: 0 10px;
+    }
+
+    .frases p:last-of-type {
+        font-size: 1rem;
+        margin-bottom: 50px; /* mais espaço para o botão no mobile */
+        padding: 0 10px;
+    }
+
+    .frases {
+        max-width: 100%;
+        padding-top: 20px;
+    }
+
+    /* Botão responsivo para mobile */
+    .botao-orcamento {
+        width: 90vw;
+        font-size: 1rem;
+        padding: 12px 15px;
+        margin-bottom: 40px;
     }
 }

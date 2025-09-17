@@ -9,18 +9,18 @@ export const HeaderPt3 = () => {
         <section className='headerPt3-section'>
             <div className='headerPt3-container'>
                 <div>
-                    <img src={medalha} alt='Ícone de uma medalha'/>
+                    <img src={medalha} alt='Ícone de uma medalha' className='icon-medalha' />
                     <p>Eletroportas - Maior fábrica de portas de enrolar do Nordeste</p>
                 </div>
                 <div>
-                    <a href='https://www.instagram.com/eletroportas?igsh=MTJ4Zjl4cXhpcHQ1cg==' target='_blank'>
-                        <img src={instagram} alt='Logo do instagram' />
+                    <a href='https://www.instagram.com/eletroportas?igsh=MTJ4Zjl4cXhpcHQ1cg==' target='_blank' rel='noreferrer'>
+                        <img src={instagram} alt='Logo do instagram' className='social-icon' />
                     </a>
-                    <a href='https://www.youtube.com/@eletroportas-portasdeenrol7842/featured' target='_blank'>
-                        <img src={youtube} alt='Logo do youtube' />
+                    <a href='https://www.youtube.com/@eletroportas-portasdeenrol7842/featured' target='_blank' rel='noreferrer'>
+                        <img src={youtube} alt='Logo do youtube' className='social-icon' />
                     </a>
-                    <a href='https://www.facebook.com/eletroportasofc/' target='_blank'>
-                        <img src={facebook} alt='Logo do facebook' />
+                    <a href='https://www.facebook.com/eletroportasofc/' target='_blank' rel='noreferrer'>
+                        <img src={facebook} alt='Logo do facebook' className='social-icon' />
                     </a>
                 </div>
             </div>

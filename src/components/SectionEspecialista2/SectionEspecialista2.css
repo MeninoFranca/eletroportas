@@ -39,6 +39,25 @@
 
 
 
+@media screen and (max-width: 767px) {
+    .section-especialista2-container {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .section-especialista2-container > p {
+        width: 100%;
+        max-width: 90%;
+        font-size: 16px;
+        text-align: center;
+        word-break: break-word;
+    }
+
+    .section-especialista2-container > h3 {
+        text-align: center;
+    }
+}
 
 
 

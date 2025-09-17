@@ -1,17 +1,21 @@
+/* --- Estilos Gerais do Container do Carrossel --- */
 .container-carrossel-principal {
-    margin: 0px 0;
+    margin: 0;
     padding: 20px 0;
     text-align: center;
     color: #ffff;
-    background-color: #1d1741; 
-    position: relative;
+    background-color: #1d1741;
+    position: relative; /* Necessário para o pseudo-elemento ::before */
+    
+    /* Estilos da imagem de fundo */
     background-image: url('../../assets/porta-carrossel.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Efeito Parallax */
 }
 
+/* Overlay de gradiente sobre a imagem de fundo */
 .container-carrossel-principal::before {
     content: '';
     position: absolute;
@@ -19,106 +23,114 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #2A5A9E, #EC7F12); 
+    background: linear-gradient(45deg, #2A5A9E, #EC7F12);
     opacity: 0.85;
-    z-index: 1;
-    pointer-events: none;
+    z-index: 1; /* Fica abaixo do conteúdo */
 }
 
+/* Garante que todo o conteúdo direto fique acima do overlay */
 .container-carrossel-principal > * {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
 }
-.container-carrossel-principal > h5 {
-   color: #b01c3d;
+
+/* --- Estilos dos Títulos (Simplificado e Corrigido) --- */
+.titulo {
+    display: flex;
+    flex-direction: column;
+    /* justify-items não se aplica a flexbox, use align-items se necessário */
+    align-items: center; /* Centraliza os títulos no container */
+    margin-bottom: 20px; /* Adiciona espaço antes do carrossel */
+}
+
+/* CORREÇÃO: Estilo para o subtítulo (antigo h5, agora p) */
+.titulo-h5 {
     font-size: 20px;
     font-weight: 500;
     text-transform: capitalize;
-}
-.container-carrossel-principal > h2 {
-   color: #ffff;
-   font-size: 34px;
-   line-height: 1.3em;
+    color: #ffffff; /* Ajustado para branco para melhor contraste */
+    text-shadow: 2px 2px 4px #01265a6c;
 }
 
-.setas {
-    background: #ffff;
-    margin: 0 10px;
-    width: 30px;
-    padding: 5px;
-    cursor: pointer;
-    border-radius: 80px;
-    position: relative;
-    z-index: 1;
+/* CORREÇÃO: Estilo único e claro para o título principal */
+.titulo h2 {
+    font-size: 52px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: -0.5px;
+    color: #ffff;
+    line-height: 1.3em;
 }
 
+
+/* --- Estilos do Carrossel e Imagens --- */
 .container-carrossel {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
-
-.transicao-carrossel > img{
-    height: 265px;
-    width: 240px;
-    padding: 10px 0 0;
-    object-fit: cover;
-} 
-
-.imagens {
-    transition: transform 1s;
-}
-
-.deslizar-esquerda {
-    transform: translateX(-5px);
-}
-
-.deslizar-direita {
-    transform: translateX(5px);
-}
-
-.container-pagination {
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.pagination {
-    color: #52488867;
-}
-
 
 .imagem-container {
     display: flex;
     gap: 10px;
+    overflow: hidden; /* Esconde partes das imagens que saem do container */
 }
 
-.container-principal,  h5{
-    font-size: 25px;
-    font-weight: 500;
-    text-transform: capitalize;
-    color: #2a5e9e;
-    text-shadow: 4px 4px 8px #01265a6c
-}
-.container-principal,  h2{
-    font-size: 52px;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: -.5px;
-    color: #ffff;
-}
-.container-principal{
-    display: flex;
+.transicao-carrossel img {
+    height: 265px;
+    width: 240px;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out; /* Transição mais rápida e suave */
 }
 
-.titulo{
-    display: flex;
-    justify-items:start;
-    flex-direction: column;
-   
+/* SUGESTÃO: Animação mais perceptível */
+.deslizar-esquerda {
+    transform: translateX(-20px); /* Movimento maior */
+    opacity: 0.8;
 }
 
-.titulo-h5 {
-    color: #ffffff;
+.deslizar-direita {
+    transform: translateX(20px); /* Movimento maior */
+    opacity: 0.8;
+}
+
+
+/* --- Estilos dos Botões de Navegação --- */
+.setas {
+    background: #ffff;
+    width: 30px; /* O tamanho já está sendo controlado pelo botão */
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%; /* Círculo perfeito */
+    display: block;
+}
+
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 600px) {
+    .container-carrossel-principal {
+        padding: 40px 10px;
+        background-attachment: scroll; /* 'fixed' pode causar problemas no mobile */
+    }
+
+    .titulo h2 {
+        font-size: 32px;
+        line-height: 1.2em;
+    }
+
+    .titulo-h5 {
+        font-size: 18px;
+    }
+
+    .transicao-carrossel > img {
+        width: 220px; /* Ajuste para caber melhor na tela */
+        height: 240px;
+    }
+
+    .setas {
+        width: 24px;
+        height: 24px;
+        padding: 4px;
+    }
 }

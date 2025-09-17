@@ -27,6 +27,7 @@ export const HeaderPt2 = () => {
     }, [location]);
 
     const listaNavbar = [
+        // ... (seu array listaNavbar continua o mesmo)
         {
             titulo: 'Início',
             caminho: '/'
@@ -80,7 +81,7 @@ export const HeaderPt2 = () => {
                                 <div>
                                     <img src={menu} onClick={() => setClicado(!clicado)} alt="Menu" />
                                 </div>
-
+                                {/* Para a versão mobile, a estrutura principal já estava quase correta. */}
                                 <ul>
                                     {
                                         clicado && (
@@ -101,11 +102,12 @@ export const HeaderPt2 = () => {
                                                                         <ul className={`sub-lista ${indice === optClicada ? 'open' : ''}`}>
                                                                             {
                                                                                 item.sub.map((subItem, subIndice) => (
-                                                                                    <Link key={subIndice} to={subItem.caminho} className='link2'>
-                                                                                   
-                                                                                        <li className='hover-lista'>{subItem.titulo}</li>
-                                                                                      
-                                                                                    </Link>      
+                                                                                    // CORREÇÃO AQUI: O <li> envolve o <Link>
+                                                                                    <li key={subIndice} className='hover-lista'>
+                                                                                        <Link to={subItem.caminho} className='link2'>
+                                                                                            {subItem.titulo}
+                                                                                        </Link>
+                                                                                    </li>
                                                                                 ))
                                                                             }
                                                                         </ul>
@@ -128,31 +130,34 @@ export const HeaderPt2 = () => {
                                     {
                                         listaNavbar.map((item, indice) => {
                                             return (
-                                                <>
+                                                // CORREÇÃO AQUI: O <li> envolve tanto o <Link> principal quanto a sub-lista <ul>
+                                                <li key={indice}>
                                                     <Link
                                                         onClick={handleClick(indice, item.caminho)}
                                                         className={optClicada === indice ? 'link-navbar2 linkClicado' : 'link-navbar2'}
-                                                        key={indice}
                                                         to={item.caminho || '#'}
                                                     >
-                                                        <li>{item.titulo}</li>
+                                                        {item.titulo}
                                                     </Link>
                                                     {
-                                                        (item.sub && optClicada === indice) ? (
+                                                        (item.sub && optClicada === indice) && (
                                                             <ul className={`${indice === 3 ? 'sub-lista2' : ''} ${indice === 4 ? 'sub-lista22' : ''}`}>
                                                                 {
                                                                     item.sub.map((subItem, subIndice) => {
                                                                         return (
-                                                                            <Link className='sublista-item' key={subIndice} to={subItem.caminho}>
-                                                                                <li>{subItem.titulo}</li>
-                                                                            </Link>
+                                                                            // CORREÇÃO AQUI: O <li> envolve o <Link>
+                                                                            <li key={subIndice}>
+                                                                                <Link className='sublista-item' to={subItem.caminho}>
+                                                                                    {subItem.titulo}
+                                                                                </Link>
+                                                                            </li>
                                                                         )
                                                                     })
                                                                 }
                                                             </ul>
-                                                        ) : ''
+                                                        )
                                                     }
-                                                </>
+                                                </li>
                                             )
                                         })
                                     }

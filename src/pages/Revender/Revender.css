@@ -1,3 +1,9 @@
 .outradivisoria {
     height: 100px;
 }
+
+@media screen and (max-width: 480px) {
+  .outradivisoria {
+    height: 50px;
+  }
+}

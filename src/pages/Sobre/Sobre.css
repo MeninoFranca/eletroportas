@@ -1,13 +1,11 @@
-
-
-
-
-
-
-
-
 @media screen and (min-width: 1025px) {
     .pagina-sobre-divisoria {
         height: 80px;
     }
+}
+
+@media screen and (max-width: 480px) {
+  .pagina-sobre-divisoria {
+    height: 50px;
+  }
 }

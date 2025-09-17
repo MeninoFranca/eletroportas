@@ -1,8 +1,14 @@
 .section-icons2-section {
     width: 100%;
+    padding: 0 15px; /* Adiciona um espaçamento lateral para telas pequenas */
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    /* ADICIONADO: Puxa a seção inteira para cima */
+    margin-top: -50px;
+    position: relative; /* Necessário para o z-index funcionar */
+    z-index: 3; /* Garante que esta seção fique sobre a anterior */
 }
 
 .section-icons2-container {
@@ -10,43 +16,42 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, minmax(230px, 300px));
+    margin: 10px;
+    gap: 15px; /* ADICIONADO: Maneira moderna e eficiente de criar espaçamento */
 }
 
 .section-icons2-container > div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
     text-align: center;
-    width: calc(95% / 2);
-    padding: 10px;
-    border: 1px solid rgba(128, 128, 128, 0.256);
+    padding: 20px 15px;
+    border: 1px solid #e0e0e0;
     border-radius: 15px;
-    position: relative;
-    top: -50px;
-    z-index: 3;
     background-color: #FFFFFF;
-    max-width: 363px;
-    width: 100%;
+    width: 100%; /* O grid já controla o tamanho, não precisa de 'calc' */
+
+    /* REMOVIDO: Estas propriedades causavam o problema de layout */
+    /* position: relative; */
+    /* top: -50px; */
+    /* z-index: 3; */
 }
 
 .section-icons2-container > div > img {
     width: 50px;
     height: 50px;
+    margin-bottom: 10px; /* Adiciona espaço entre o ícone e o título */
 }
 
 .section-icons2-container > div > h3 {
     color: #2A5E9E;
+    margin-bottom: 8px; /* Adiciona espaço entre o título e o parágrafo */
 }
-
-
-
-
-
 
 @media screen and (min-width: 768px) {
     .section-icons2-container {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 250px;
+        /* A altura das linhas não é mais necessária, o conteúdo define a altura */
     }
 }

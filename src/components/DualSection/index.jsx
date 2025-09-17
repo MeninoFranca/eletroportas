@@ -33,7 +33,6 @@ export const DualSection = () => {
                         <p>Fale com nossa equipe de vendas</p>
                         <div>
                             <BotaoPersonalizado href={`https://api.whatsapp.com/send?phone=${encodeURIComponent('5571996102055')}&text=${encodeURIComponent('Olá, gostaria de falar com um atendente.')}`} ddd='71' cidade='Salvador' />
-                            <BotaoPersonalizado href={`https://api.whatsapp.com/send?phone=${encodeURIComponent('5575997101150')}&text=${encodeURIComponent('Olá, gostaria de falar com um atendente.')}`} ddd='75' cidade='Feira de Santana' />
                             <BotaoPersonalizado href={`https://api.whatsapp.com/send?phone=${encodeURIComponent('5577998622777')}&text=${encodeURIComponent('Olá, gostaria de falar com um atendente.')}`} ddd='77' cidade='Barreiras' />
                         </div>
                     </div>

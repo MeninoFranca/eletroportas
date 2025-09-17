@@ -10,3 +10,17 @@
     font-weight: 400;
     color: #2A5E9E;
 }
+
+@media (max-width: 600px) {
+    .check-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 5px 10px;
+    }
+
+    .check-container h2 {
+        font-size: 14px;
+        text-align: left;
+    }
+}

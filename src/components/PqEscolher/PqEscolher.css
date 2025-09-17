@@ -1,78 +1,126 @@
+/* Estilos gerais */
 .pqEscolher-section {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .pqEscolher-container {
     width: 100%;
     max-width: 1240px;
     background-color: #2A5E9E;
-    padding: 30px 10px 20px;
-    text-align: center;
+    padding: 30px 20px 20px;
     color: #FFFFFF;
-    border-radius: 50px 50px 50px 0;
+    border-radius: 60px 60px 60px 0;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.pqEscolher-container h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.pqEscolher-container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+/* LISTAS */
+
+.pqEscolher-pt1 ul,
+.pqEscolher-pt2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 800px;
 }
 
 .pqEscolher-pt1 ul li,
 .pqEscolher-pt2 ul li {
     display: flex;
     align-items: center;
-    padding: 5px;
-    text-align: start;
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.4;
+    gap: 12px;
 }
 
+/* Ícone laranja */
 .pqEscolher-pt1 ul li img,
 .pqEscolher-pt2 ul li img {
     width: 20px;
-    margin-right: 10px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
-.pqEscolher-pt1 {
-    margin-top: 40px;
-}
-
-.pqEscolher-pt2 {
-    margin-bottom: 40px;
-}
-
-.pqEscolher-titulo {
-    text-transform: lowercase;
-}
-
-.pqEscolher-titulo::first-letter,
-.pqEscolher-titulo span {
+/* BOTÃO */
+.pqEscolher-container button,
+.pqEscolher-container .botao-orcamento {
+    margin-top: 30px;
+    background-color: #EC7F12;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
     text-transform: uppercase;
 }
 
+/* ===================== RESPONSIVO ===================== */
 
-
-
-@media screen and (min-width: 768px) {
-    .pq-mini-container {
-        display: flex;
-        align-items: start;
-        justify-content: space-between;
-    }
-
-    .pqEscolher-pt1 {
-        margin-bottom: 40px;
-    }
-    
-    .pqEscolher-pt2 {
-        margin-top: 40px;
-    }
-
+/* MOBILE: alinha texto ao lado do ícone */
+@media screen and (max-width: 768px) {
     .pqEscolher-container {
-        text-align: start;
-        max-width: 922px;
-        padding-left: 40px;
-        padding-right: 40px;
+        text-align: left;
+        padding: 30px 20px;
     }
 
     .pqEscolher-container h2 {
-        font-size: 48px;
-        margin-top: 20px;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .pqEscolher-container p {
+        font-size: 15px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .pqEscolher-pt1 ul li,
+    .pqEscolher-pt2 ul li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .pqEscolher-pt1 ul,
+    .pqEscolher-pt2 ul {
+        align-items: flex-start;
+    }
+
+    .pqEscolher-container button {
+        margin-left: 0;
     }
 }

@@ -34,7 +34,7 @@
 .section-beneficios-container {
     position: relative;
     z-index: 2;
-    padding: 50px 20px;
+    padding: 30px 15px;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -45,6 +45,8 @@
 .section-beneficios-container h2 {
     text-align: center;
     text-transform: lowercase;
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    margin-bottom: 20px;
 }
 
 .section-beneficios-container h2::first-letter {
@@ -53,33 +55,82 @@
 
 .section-beneficios-container div ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 .section-beneficios-container div ul li {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     margin: 8px 0;
 }
 
 .section-beneficios-container div ul li p {
     text-align: justify;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    line-height: 1.4;
+    margin: 0;
 }
 
 .section-beneficios-container div ul li img {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    flex-shrink: 0;
 }
 
+/* Container listas: mobile first - coluna e full width */
+.container-listas {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
 
+.container-listas > div {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
 
-
-
-
-
-@media screen and (min-width: 1025px) {
+/* Para telas médias e maiores */
+@media screen and (min-width: 900px) {
     .container-listas {
-        display: flex;
-        align-items: start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 25px;
+        padding: 0;
+    }
+    .container-listas > div {
+        flex: 1 1 300px;
+        min-width: 280px;
+        max-width: 400px;
+        margin: 10px;
+    }
+}
+
+/* Ajuste para telas muito pequenas (<400px) */
+@media screen and (max-width: 400px) {
+    .section-beneficios-container {
+        padding: 20px 10px;
+    }
+    .section-beneficios-container h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    .section-beneficios-container div ul li p {
+        font-size: 0.9rem;
+    }
+    .section-beneficios-container div ul li img {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
     }
 }

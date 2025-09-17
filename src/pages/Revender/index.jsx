@@ -27,11 +27,9 @@ export const Revender = () => {
             <SectionKit />
             <RevenderdorBeneficios />
             <SectionModelos />
-            <ModalVideo tipo='iframe' videoId="6OYKxOjzXOk" texto="Assista ao vídeo" imagem={eletroportas} />
-
             <div className='outradivisoria'></div>
             <SectionSucesso />
-            <SectionGrid titulo='Eletroportas fazendo parte dos seus Sonhos!' texto='Descubra porque somos a Maior Fábrica de Portas de Enrolar do Nordeste' imagem1={prt1} imagem2={prt3} imagem3={prt2} imagem4={prt4} imagem5={prt5} imagem6={prt6} />
+            <SectionGrid titulo='Eletroportas fazendo parte dos seus Sonhos!' texto='Descubra porque somos a Maior Fábrica de Portas de Enrolar do Nordeste' imagem1={prt6} imagem2={prt3} imagem3={prt5} imagem4={prt1} />
             <SectionOrcamento />
             <SectionDuvidas />
         </>

@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
+# Bloquear arquivos sensíveis
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /context/
+Disallow: /README.md
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /vite.config.js
+Disallow: /vercel.json
+
 Sitemap: https://www.eletroportas.com.br/sitemap.xml

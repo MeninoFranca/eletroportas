@@ -17,6 +17,27 @@
 
 .btn-orcamento h3 {
     color: #FFFFFF;
-    margin-left: 10px;
+    margin-left: 5px;
     text-transform: uppercase;
 }
+
+@media (max-width: 600px) {
+    .btn-orcamento {
+        width: 70%;
+        height: auto;
+        padding: 10px 16px;
+    }
+
+    .btn-orcamento img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .btn-orcamento h3 {
+        font-size: 1rem;
+        margin-left: 8px;
+        text-align: center;
+    }
+}
+
+

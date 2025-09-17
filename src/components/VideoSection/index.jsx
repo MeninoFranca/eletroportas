@@ -10,13 +10,7 @@ export const VideoSection = () => {
                 {/* <video className='video' autoPlay muted loop>
                     <source src={bgVideo} />
                 </video> */}
-                <iframe
-                    className='video'
-                    src={`https://www.youtube.com/embed/${ID_DO_VIDEO}?autoplay=1&mute=1&loop=1&playlist=${ID_DO_VIDEO}`}
-                    frameBorder='0'
-                    allow='autoplay; encrypted-media'
-                    allowFullScreen
-                ></iframe>
+               
             </div>
             <div className='section-container'>
                 <div className='frases-container'>
@@ -31,3 +25,4 @@ export const VideoSection = () => {
         </section>
     )
 }
+

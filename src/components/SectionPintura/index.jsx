@@ -20,6 +20,7 @@ export const SectionPintura = () => {
                 </div>
             </div>
         </section>
+        <br /><br /><br /><br /><br />
 
         <EletroStaticaBeneficios/>
         </>

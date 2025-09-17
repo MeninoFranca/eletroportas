@@ -8,16 +8,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 55px;
+    margin-top: 25px;
+    padding: 0;
     width: 100vw;
 }
 
 .rodape-container {
     max-width: 1240px;
+    padding: 0 10px;
 }
 
 .rodape-linha {
     width: 100%;
     border-bottom: 1px dashed #FFFFFF;
-    margin: 25px auto;
+    margin: 10px auto;
+}
+
+@media (max-width: 600px) {
+    .rodape {
+        padding: 10px 15px;
+        margin-top: 15px;
+    }
+
+    .rodape-container {
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    .rodape-linha {
+        margin: 8px auto;
+        border-bottom-width: 1px;
+    }
 }

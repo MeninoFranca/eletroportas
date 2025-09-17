@@ -31,16 +31,6 @@ export const WppButton = () => {
                 window.open(url1, '_blank');
                 break;
 
-            case 'feira de santana':
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    event: 'whatsapp_button_click',
-                });
-                const url2 = `https://api.whatsapp.com/send?phone=${encodeURIComponent('5575997101150')}&text=${encodeURIComponent(msg())}`;
-                console.log('Generated URL:', url2);
-                window.open(url2, '_blank');
-                break;
-
             case 'barreiras':
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
@@ -56,12 +46,15 @@ export const WppButton = () => {
 
     return (
         <div className='wpp-modal-container'>
-            <a
+
+            <button
                 className='wpp-button'
-                onClick={() => { setOpen(true) }}
+                onClick={() => setOpen(true)}
+                aria-label="Abrir formulário WhatsApp"
             >
                 <img src={wpp} alt="WhatsApp" />
-            </a>
+            </button>
+
 
             {isOpen && (
                 <div className='full-modal'>
@@ -72,7 +65,7 @@ export const WppButton = () => {
                                 <div className='titulo-sessao-wpp'>
                                     CENTRAL ELETROPORTAS
 
-                                    <img src="https://img.icons8.com/?size=100&id=QkXeKixybttw&format=png&color=000000" alt="" />
+                                    <img src="https://img.icons8.com/?size=100&id=QkXeKixybttw&format=png&color=000000" alt="Botão para whatsapp" />
 
                                 </div>
 
@@ -93,19 +86,6 @@ export const WppButton = () => {
                                     >
                                         UNIDADE - SALVADOR
                                     </span>
-                                </div>
-                                <div>
-                                    <div
-                                        onClick={() => handleMandarMenssagem('feira de santana')}
-                                        className='button-feiradesantana-wpp'
-                                    >
-                                        <span
-                                            title='clique aqui para iniciar uma conversa'
-                                        >
-                                            UNIDADE - FEIRA DE SANTANA
-                                        </span>
-
-                                    </div>
                                 </div>
                                 <div>
                                     <div

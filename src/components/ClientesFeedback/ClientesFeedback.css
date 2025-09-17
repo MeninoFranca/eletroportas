@@ -80,14 +80,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 @media screen and (min-width: 768px) {
     .clientes-feedback-parte1 {
         align-items: start;
@@ -107,4 +99,52 @@
    .cliente-comentario {
     min-width: 430px;
    }
+}
+
+@media (max-width: 600px) {
+    .clientes-feedback-parte1 {
+        padding: 0 15px 30px 15px;
+    }
+
+    .clientes-feedback-parte1 > h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .clientes-feedback-parte1 > p {
+        font-size: 14px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .cliente-comentario {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    .cliente-perfil {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cliente-perfil > img {
+        padding: 10px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .cliente-perfil > div > h5 {
+        font-size: 16px;
+    }
+
+    .cliente-perfil > div > h6 {
+        font-size: 11px;
+    }
+
+    .div-aspas {
+        top: -20px;
+        left: 15px;
+        padding: 6px;
+    }
 }

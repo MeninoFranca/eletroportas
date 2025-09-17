@@ -36,3 +36,28 @@
     top: -30px;
     right: 50px;
 }
+
+@media (max-width: 600px) {
+    .card > img {
+      width: 100%;
+      max-width: 100%;
+      max-height: none;
+    }
+  
+    .card > h6 {
+      font-size: 18px;
+      margin: 15px 10px 8px 10px;
+    }
+  
+    .card > p {
+      padding: 0 10px;
+    }
+  
+    .supradiv > img {
+      width: 40px;
+      padding: 5px;
+      top: -20px;
+      right: 20px;
+    }
+  }
+  

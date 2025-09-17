@@ -8,7 +8,6 @@ export const SectionEspecialista2 = () => {
                 <img src={telefone} />
                 <h3>Fale com um de nossos especialistas</h3>
                 <p>(71) 99610-2055 - Salvador</p>
-                <p>(75) 99710-1150 - Feira de Santana</p>
                 <p>(77) 99862-2777 - Barreiras</p>
             </div>
         </section>

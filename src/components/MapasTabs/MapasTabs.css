@@ -24,3 +24,25 @@
     height: 300px;
     border: 1px solid rgba(128, 128, 128, 0.253);
 }
+
+@media (max-width: 600px) {
+    .mapas-tabs {
+      flex-direction: column;
+      width: 100%;
+      margin: 20px auto 0;
+    }
+  
+    .mapas-tabs h3 {
+      border-radius: 10px;
+      border-left: none;
+      border-right: none;
+      border-top: 1px solid #2a5e9e6a;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+  
+    .iframe {
+      height: 200px;
+    }
+  }
+  

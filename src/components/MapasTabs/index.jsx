@@ -11,9 +11,6 @@ export const MapasTabs = () => {
                 <h3 onClick={() => setTabClicada('Salvador')} className={tabClicada === 'Salvador' ? 'tab-clicada' : ''}>
                     Salvador
                 </h3>
-                <h3 onClick={() => setTabClicada('Feira de Santana')} className={tabClicada === 'Feira de Santana' ? 'tab-clicada' : ''}>
-                    Feira de Santana
-                </h3>
                 <h3 onClick={() => setTabClicada('Barreiras')} className={tabClicada === 'Barreiras' ? 'tab-clicada' : ''}>
                     Barreiras
                 </h3>

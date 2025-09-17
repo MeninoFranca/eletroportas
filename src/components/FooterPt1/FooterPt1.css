@@ -11,11 +11,11 @@
 }
 
 .rodape-logo {
-    margin-bottom: 45px;
+    margin-bottom: 15px;
 }
 
 .rodape-infos {
-    gap: 45px;
+    gap: 15px;
     text-align: center;
 }
 
@@ -28,26 +28,16 @@
 
 .rodape-infos > div > img {
     background-color: #EC7F12;
-    width: 60px;
-    height: 60px;
-    padding: 10px;
-    margin-bottom: 25px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 .rodape-infos > div > h5 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (min-width: 768px) {
     .rodape-parte1 {
@@ -62,5 +52,46 @@
 @media screen and (min-width: 1025px) {
     .rodape-infos {
         flex-direction: row;
+    }
+}
+
+@media (max-width: 600px) {
+    .rodape-parte1 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .rodape-logo {
+        margin-bottom: 20px;
+        width: 80%;
+    }
+
+    .rodape-logo > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .rodape-infos {
+        gap: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .rodape-infos,
+    .rodape-infos > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodape-infos > div > img {
+        width: 35px;
+        height: 35px;
+        padding: 4px;
+        margin-bottom: 8px;
+    }
+
+    .rodape-infos > div > h5 {
+        font-size: 14px;
     }
 }
