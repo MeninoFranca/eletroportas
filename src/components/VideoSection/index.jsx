@@ -1,16 +1,25 @@
 import './VideoSection.css';
-// import bgVideo from '../../assets/section_video.mp4'
 import { BotaoOrcamento } from '../BotaoOrcamento';
+import { LazyImage } from '../LazyImage';
 
 export const VideoSection = () => {
-    const ID_DO_VIDEO = "IJ5XR1QFo7c";
     return (
         <section className='sec'>
             <div className='video-container'>
-                {/* <video className='video' autoPlay muted loop>
-                    <source src={bgVideo} />
-                </video> */}
-               
+                <LazyImage
+                    src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+                    alt="Fábrica de portas de enrolar"
+                    className="video"
+                    style={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                    }}
+                />
             </div>
             <div className='section-container'>
                 <div className='frases-container'>

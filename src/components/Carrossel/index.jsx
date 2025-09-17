@@ -1,22 +1,17 @@
 import './Carrossel.css';
-import slide1 from '../../assets/slide1.jpg';
-import slide2 from '../../assets/slide2.jpg';
-import slide3 from '../../assets/slide3.jpg';
-import slide4 from '../../assets/slide4.jpg';
-import slide5 from '../../assets/slide5.jpg';
-import slide6 from '../../assets/slide6.jpg';
 import setaDireita from '../../assets/duplodireita.png';
 import setaEsquerda from '../../assets/duploesquerda.png';
 import { useEffect, useState, useMemo } from 'react';
+import { LazyImage } from '../LazyImage';
 
-// MELHORIA: Array de imagens com 'alt' descritivo para acessibilidade
+// Array de imagens otimizadas do Pexels
 const imagens = [
-    { id: 1, image: slide1, alt: 'Descrição da imagem 1 para acessibilidade' },
-    { id: 2, image: slide2, alt: 'Descrição da imagem 2 para acessibilidade' },
-    { id: 3, image: slide3, alt: 'Descrição da imagem 3 para acessibilidade' },
-    { id: 4, image: slide4, alt: 'Descrição da imagem 4 para acessibilidade' },
-    { id: 5, image: slide5, alt: 'Descrição da imagem 5 para acessibilidade' },
-    { id: 6, image: slide6, alt: 'Descrição da imagem 6 para acessibilidade' }
+    { id: 1, image: 'https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop', alt: 'Porta de enrolar automática instalada' },
+    { id: 2, image: 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop', alt: 'Sistema de automação de portas' },
+    { id: 3, image: 'https://images.pexels.com/photos/1108097/pexels-photo-1108097.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop', alt: 'Fábrica de portas industriais' },
+    { id: 4, image: 'https://images.pexels.com/photos/1108095/pexels-photo-1108095.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop', alt: 'Instalação profissional de portas' },
+    { id: 5, image: 'https://images.pexels.com/photos/1108093/pexels-photo-1108093.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop', alt: 'Porta automática comercial' },
+    { id: 6, image: 'https://images.pexels.com/photos/1108091/pexels-photo-1108091.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop', alt: 'Tecnologia em automação' }
 ];
 
 export const Carrossel = () => {
@@ -76,7 +71,17 @@ export const Carrossel = () => {
 
         return slidesToShow.map((item) => (
             <div className="transicao-carrossel" key={item.id}>
-                <img className={`imagens ${slideClass}`} src={item.image} loading="lazy" alt={item.alt} />
+                <LazyImage 
+                    className={`imagens ${slideClass}`} 
+                    src={item.image} 
+                    alt={item.alt}
+                    style={{
+                        height: '265px',
+                        width: '240px',
+                        objectFit: 'cover',
+                        transition: 'transform 0.4s ease-in-out'
+                    }}
+                />
             </div>
         ));
     };

@@ -10,13 +10,18 @@ export const HeaderPt2 = () => {
     const location = useLocation();
 
     useEffect(() => {
+        let timeoutId;
         const handleResizable = () => {
-            setValorTela(window.innerWidth);
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                setValorTela(window.innerWidth);
+            }, 100);
         }
         window.addEventListener('resize', handleResizable);
 
         return () => {
             window.removeEventListener('resize', handleResizable);
+            clearTimeout(timeoutId);
         }
     }, []);
 
@@ -27,7 +32,6 @@ export const HeaderPt2 = () => {
     }, [location]);
 
     const listaNavbar = [
-        // ... (seu array listaNavbar continua o mesmo)
         {
             titulo: 'Início',
             caminho: '/'
@@ -79,9 +83,15 @@ export const HeaderPt2 = () => {
                         <section className='orange-container-section'>
                             <div className='orange-container-container'>
                                 <div>
-                                    <img src={menu} onClick={() => setClicado(!clicado)} alt="Menu" />
+                                    <img 
+                                        src={menu} 
+                                        onClick={() => setClicado(!clicado)} 
+                                        alt="Menu" 
+                                        loading="lazy"
+                                        width="24"
+                                        height="24"
+                                    />
                                 </div>
-                                {/* Para a versão mobile, a estrutura principal já estava quase correta. */}
                                 <ul>
                                     {
                                         clicado && (
@@ -102,7 +112,6 @@ export const HeaderPt2 = () => {
                                                                         <ul className={`sub-lista ${indice === optClicada ? 'open' : ''}`}>
                                                                             {
                                                                                 item.sub.map((subItem, subIndice) => (
-                                                                                    // CORREÇÃO AQUI: O <li> envolve o <Link>
                                                                                     <li key={subIndice} className='hover-lista'>
                                                                                         <Link to={subItem.caminho} className='link2'>
                                                                                             {subItem.titulo}
@@ -130,7 +139,6 @@ export const HeaderPt2 = () => {
                                     {
                                         listaNavbar.map((item, indice) => {
                                             return (
-                                                // CORREÇÃO AQUI: O <li> envolve tanto o <Link> principal quanto a sub-lista <ul>
                                                 <li key={indice}>
                                                     <Link
                                                         onClick={handleClick(indice, item.caminho)}
@@ -145,7 +153,6 @@ export const HeaderPt2 = () => {
                                                                 {
                                                                     item.sub.map((subItem, subIndice) => {
                                                                         return (
-                                                                            // CORREÇÃO AQUI: O <li> envolve o <Link>
                                                                             <li key={subIndice}>
                                                                                 <Link className='sublista-item' to={subItem.caminho}>
                                                                                     {subItem.titulo}

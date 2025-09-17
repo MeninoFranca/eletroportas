@@ -5,6 +5,16 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/src/assets/logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Preconnect para fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- DNS Prefetch para recursos externos -->
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://api.whatsapp.com">
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://www.google.com">
 
   <meta name="keywords"
     content="Eletroportas, portas de enrolar automaticas, porta de enrolar automatica, porta de enrolar, porta automatica, portas de enrolar automáticas, porta de enrolar automática, porta automática">
@@ -26,11 +36,16 @@
   <meta name="twitter:image" content="https://eletroportas.com.br/src/assets/logo.png" />
   <link rel="canonical" href="https://eletroportas.com.br/" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+  </noscript>
 
     <script>
       if (window.location.hostname === 'eletroportas.com.br') {
@@ -56,6 +71,7 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  
   <!-- Google Tag Manager (noscript) condicional -->
   <noscript>
     <script>

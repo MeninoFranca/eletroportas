@@ -1,7 +1,21 @@
 import './ModalVideo.css'
 import play from '../../assets/icon-play.png'
-import { useState } from 'react'
+import { useState, lazy, Suspense } from 'react'
 import PropTypes from 'prop-types'
+
+const LazyIframe = lazy(() => Promise.resolve({
+    default: ({ src, title, ...props }) => (
+        <iframe
+            src={src}
+            title={title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+            {...props}
+        />
+    )
+}))
 
 export const ModalVideo = (props) => {
     const [modalEstado, setModalEstado] = useState(false)
@@ -29,15 +43,14 @@ export const ModalVideo = (props) => {
                         <p onClick={() => setModalEstado(false)}>X</p>
                         {
                             props.tipo === 'iframe' && (
-                                <iframe
-                                    width="560"
-                                    height="315"
-                                    src={`https://www.youtube.com/embed/${props.videoId}`}
-                                    title="YouTube video player"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
+                                <Suspense fallback={<div>Carregando vídeo...</div>}>
+                                    <LazyIframe
+                                        width="560"
+                                        height="315"
+                                        src={`https://www.youtube.com/embed/${props.videoId}?autoplay=1`}
+                                        title="YouTube video player"
+                                    />
+                                </Suspense>
                             )
                         }
                         {
